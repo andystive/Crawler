@@ -1,5 +1,5 @@
 '''
-第一版代理ip池，
+第一版代理ip池，不再使用
 '''
 import requests
 import re

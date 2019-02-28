@@ -8,7 +8,11 @@ proxies_list = get_proxy()
 
 def get_qb_content():
     qb_content = []
-    for page in range(1,3):
+    #for page in range(1,3):
+    page = 1
+    # for循环不支持修改循环变量
+    while (page < 3):
+        print(page)
         url = 'https://www.qiushibaike.com/text/page/' + str(page)
         headers = {'User-Agent': random.choice(user_agent_list)}
         try:
@@ -23,10 +27,12 @@ def get_qb_content():
                     result = item.replace("<br/>", ",").strip()
                     #print(result)
                     qb_content.append(result)
-            except: AttributeError
-                print()
+            except Exception as err:
+                print('代理ip错误！',err)
             else:
-                print('写入第{}页数据成功！'.format(page))
+                print('缓存第{}页数据成功！'.format(page))
+                page = page + 1
+                # 控制循环只有在代理可用的情况下才加1，避免跳过了当前页面
         except:
             print('代理ip池为空')
     print(len(qb_content))

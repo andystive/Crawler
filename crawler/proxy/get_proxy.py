@@ -8,11 +8,12 @@ def get_proxy():
         lines = f.readlines()
         for i in range(0, len(lines)):
             ip = lines[i].strip('\n')
-            proxy_ip.append(ip)
+            dict_ip = eval(ip)
+            # 将代理ip列表，从字符串转换成字典，否则proxies报错
+            # print(type(dict_ip))
+            proxy_ip.append(dict_ip)
     return proxy_ip
 
 
 if __name__ == '__main__':
-    ip = get_proxy()
-    for i in ip:
-        print(i)
+   get_proxy()

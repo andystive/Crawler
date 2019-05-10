@@ -51,7 +51,7 @@ def get_proxy_page(api):
     '''
     将有效的代理ip写入到文件
     '''
-    with open(r'{}\IP.txt'.format(os.getcwd()), 'w', encoding='utf-8') as f:
+    with open(r'{}\IP.txt'.format(os.getcwd()), 'w+', encoding='utf-8') as f:
         for ip in eff_ip:
             print(ip, file=f)
 

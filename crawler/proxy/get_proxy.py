@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+# @Time    : 19/05/09
+# @Author  : Virus
+# @FileName: get_proxy.py
+# @Software: PyCharm
+# 本模块作用：将保存在本地ip.txt中的ip地址读取并返回到列表
+
 import os
 
 ip_path = os.path.split(os.path.realpath(__file__))[0]

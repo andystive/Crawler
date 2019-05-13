@@ -10,8 +10,10 @@
 import os
 
 
-def get_proxy(ip_path):
+def get_proxy():
     """获取IP.txt内容，返回ip字典"""
+    ip_path = os.path.split(os.path.realpath(__file__))[0]
+    # os.path.realpath(__file__)获取当前文件路径，os.path.split将文件路径和文件名分割，[0]取文件路径
     proxy_ip = []
     with open(r'{}\IP.txt'.format(ip_path), encoding='utf-8') as f:
         lines = f.readlines()
@@ -23,12 +25,5 @@ def get_proxy(ip_path):
     return proxy_ip
 
 
-def main():
-    """函数入口，定义api地址及调用其他函数"""
-    ip_path = os.path.split(os.path.realpath(__file__))[0]
-    # os.path.realpath(__file__)获取当前文件路径，os.path.split将文件路径和文件名分割，[0]取文件路径
-    get_proxy(ip_path)
-
-
 if __name__ == '__main__':
-    main()
+    print(get_proxy())

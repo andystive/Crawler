@@ -21,8 +21,9 @@ def connect_local_db():
     cur = coon.cursor()
     return coon, cur
 
-def create_table():
+def create_element_table():
     """创建数据表"""
+    coon, cur = connect_local_db()
     sql_create = "create table if not exists Element(" \
                  "id int not null auto_increment," \
                  "url char(51) not null," \
@@ -52,3 +53,4 @@ def insert_element_data():
 
 
 if __name__ == '__main__':
+    create_element_table()

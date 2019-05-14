@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 """
-获取西刺代理中的IP地址，并将地址保存到本地IP.txt文件中
+获取hh代理中的IP地址，并将地址保存到本地IP.txt文件中
 @Time    : 19/05/09
 @Author  : Virus
-@FileName: xc_proxy.py
+@FileName: hh_proxy.py
 @Software: PyCharm
 """
 
@@ -64,7 +64,7 @@ def get_proxy_page(url):
 
 def main():
     """函数入口，定义url地址及调用其他函数"""
-    url = 'https://www.xicidaili.com/wn/'
+    url = 'http://ip.jiangxianli.com/'
     get_proxy_page(url)
 
 

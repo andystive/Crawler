@@ -30,6 +30,12 @@ def create_element_table():
                  "description varchar(100) not null," \
                  "totalPrice varchar(10) not null," \
                  "price int not null," \
+                 "type char(8)," \
+                 "floor varchar(20)," \
+                 "area varchar(15)," \
+                 "communityName varchar(35)," \
+                 "areaName varchar(20)," \
+                 "location varchar(20)," \
                  "primary key (id)" \
                  ")engine=InnoDB default charset=utf8"
 

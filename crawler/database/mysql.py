@@ -15,7 +15,7 @@ def connect_local_db():
     coon = pymysql.connect(
         host='127.0.0.1',
         user='root',
-        passwd='shurumima1234',
+        passwd='password',
         db='crawler'
     )
     cur = coon.cursor()

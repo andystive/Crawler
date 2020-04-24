@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
 数据库操作，连接数据库，建立新表，写入数据
-# @Time    : 19/05/13 15:41
+# @Time    : 2019/05/13 15:41
 # @Author  : Virus
 # @FileName: mysql.py
 # @Software: PyCharm

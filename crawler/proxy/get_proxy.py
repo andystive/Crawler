@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
 读取本地IP.txt文件内容，并返回代理ip字典
-@Time    : 19/05/09
+@Time    : 2019/05/09
 @Author  : Virus
 @FileName: 89_proxy.py
 @Software: PyCharm

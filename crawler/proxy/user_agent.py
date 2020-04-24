@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
 提供爬虫运行所需user_agent头文件
-@Time    : 19/05/09
+@Time    : 2019/05/09
 @Author  : Virus
 @FileName: user_agent.py
 @Software: PyCharm

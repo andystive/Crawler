@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
 爬取链家网在售二手房数据
-# @Time    : 19/05/13 8:59
+# @Time    : 2019/05/13 8:59
 # @Author  : Virus
 # @FileName: lianjia.py
 # @Software: PyCharm

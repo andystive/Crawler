@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
 获取西刺代理中的IP地址，并将地址保存到本地IP.txt文件中
-@Time    : 19/05/09
+@Time    : 2019/05/09
 @Author  : Virus
 @FileName: xc_proxy.py
 @Software: PyCharm

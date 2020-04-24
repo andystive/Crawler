@@ -1,7 +1,8 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
-# @Time    : 19/05/16 18:36
+# @Time    : 2019/05/16 18:36
 # @Author  : Virus
 # @FileName: QiuBai.py
 # @Software: PyCharm

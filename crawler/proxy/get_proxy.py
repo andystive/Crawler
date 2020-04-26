@@ -5,7 +5,7 @@
 读取本地IP.txt文件内容，并返回代理ip字典
 @Time    : 2019/05/09
 @Author  : Virus
-@FileName: 89_proxy.py
+@FileName: get_proxy.py
 @Software: PyCharm
 """
 import os

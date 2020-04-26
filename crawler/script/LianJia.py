@@ -5,16 +5,16 @@
 爬取链家网在售二手房数据
 # @Time    : 2019/05/13 8:59
 # @Author  : Virus
-# @FileName: lianjia.py
+# @FileName: LianJia.py
 # @Software: PyCharm
 """
 
-from crawler.database.mysql import *
 import re
 import random
 import requests
 from crawler.proxy.user_agent import *
 from crawler.proxy.get_proxy import *
+from crawler.database.mysql import *
 
 
 def get_url_page(header, proxy, coon, cur):
@@ -43,19 +43,25 @@ def get_url_page(header, proxy, coon, cur):
     cur.close()
     coon.close()
 
-
+"""
 def get_detail_page(url, header, proxy):
     """爬取链家在售二手房详情页面信息，并获取详细数据"""
     response = requests.get(url=url, headers=header)
     res = '<div class="room"><div class="mainInfo">(.*?)</div><div class="subInfo">(.*?)</div>.*?<div class="area"><div class="mainInfo">(.*?)</div>.*?class="info ">(.*?)</a>.*?target="_blank">(.*?)</a>.*?target="_blank">(.*?)</a>'
-    pattern = re.compile(res,re.S)
+    pattern = re.compile(res, re.S)
     content = re.findall(pattern, str(response.text))
     for element in content:
         sql_insert = "insert into Element" \
                      "(type, floor, area, communityName, areaName, location)" \
                      "values" \
                      "(%s, %s, %s, %s, %s, $s)"
-        params = (element[0], element[1], element[2], element[3], element[4], element[5])
+        params = (
+            element[0],
+            element[1],
+            element[2],
+            element[3],
+            element[4],
+            element[5])
         cur.execute(sql_insert, params)
     print("第{}页数据写入数据库成功...".format(page))
     page = page + 1
@@ -64,8 +70,7 @@ def get_detail_page(url, header, proxy):
     coon.commit()
     cur.close()
     coon.close()
-
-
+"""
 
 def main():
     """函数入口，初始化url、headers、proxies、cur、coon值，并调用其他函数"""

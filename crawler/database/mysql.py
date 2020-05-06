@@ -23,8 +23,6 @@ def connect_local_db():
     return coon, cur
 
 
-
-
 def insert_element_data():
     """将爬取到的链家数据存储到数据库"""
     data = main()
@@ -38,6 +36,7 @@ def insert_element_data():
     coon.commit()
     cur.close()
     coon.close()
+
 
 if __name__ == '__main__':
     create_element_table()

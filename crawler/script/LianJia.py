@@ -36,14 +36,14 @@ def get_url_page(header, proxy, coon, cur):
                 params = (element[0], element[1], element[2], element[3])
                 cur.execute(sql_insert, params)
             print("第{}页数据写入数据库成功...".format(page))
-            page = page + 1
-        except Exception:
+            page += 1
+        except Exception as err :
             print("第{}页数据爬取失败，重试中...".format(page))
     coon.commit()
     cur.close()
     coon.close()
 
-"""
+
 def get_detail_page(url, header, proxy):
     """爬取链家在售二手房详情页面信息，并获取详细数据"""
     response = requests.get(url=url, headers=header)
@@ -70,7 +70,7 @@ def get_detail_page(url, header, proxy):
     coon.commit()
     cur.close()
     coon.close()
-"""
+
 
 def main():
     """函数入口，初始化url、headers、proxies、cur、coon值，并调用其他函数"""
